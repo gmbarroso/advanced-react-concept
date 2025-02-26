@@ -1,6 +1,7 @@
 import type React from 'react'
 import usePaginatedData from '../hooks/usePaginatedData'
 import Button from "./Button"
+import "./ProductList.css"
 
 const ProductList: React.FC = () => {
     const pageSize = 10
@@ -23,14 +24,14 @@ const ProductList: React.FC = () => {
     }
     
     return (
-        <div>
+        <div className='product-list'>
             <h1>Product List</h1>
             <ul>
                 {data.map((product) => (
                     <li key={product.id}>{product.name} - ${product.price}</li>
                 ))}
             </ul>
-            <div>
+            <div className='pagination'>
                 <Button
                     onClick={handlePrevious}
                     variant="secondary"
