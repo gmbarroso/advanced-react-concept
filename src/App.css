@@ -1,0 +1,9 @@
+@import "./styles/variables.css";
+
+.App {
+  font-family: Arial, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: #333;
+}
+
